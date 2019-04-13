@@ -20,7 +20,7 @@
                 <outlet property="countryCodePopUp" destination="Hi5-K2-w3d" id="aRI-zy-6gQ"/>
                 <outlet property="emptyFieldsWindow" destination="3T5-HS-Kba" id="ic4-Ly-Se4"/>
                 <outlet property="resetButton" destination="KhM-FR-Ch0" id="Ula-9H-k8r"/>
-                <outlet property="techIDField" destination="7H7-2L-z9T" id="NXw-TB-7Nn"/>
+                <outlet property="techIDField" destination="7H7-2L-z9T" id="ZlG-fN-22G"/>
                 <outlet property="topGunPopUp" destination="NQ8-vG-dga" id="FHj-Rw-IpR"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -291,9 +291,12 @@
                         <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vvf-Mr-l9S">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                         </buttonCell>
                         <connections>
-                            <action selector="submitButton:" target="Voe-Tx-rLC" id="xzF-Kc-gZG"/>
+                            <action selector="submitButton:" target="Voe-Tx-rLC" id="mvc-6P-54b"/>
                         </connections>
                     </button>
                 </subviews>

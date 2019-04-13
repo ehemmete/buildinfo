@@ -13,7 +13,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     //Outlets for all the user interaction that we will pull data from
     @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var emptyFieldsWindow: NSWindow!
     @IBOutlet weak var techIDField: NSTextField!
     @IBOutlet weak var assignedUserField: NSTextField!
     @IBOutlet weak var topGunPopUp: NSPopUpButton!
@@ -21,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var businessUnitPopUp: NSPopUpButton!
     @IBOutlet weak var countryCodePopUp: NSPopUpButton!
     @IBOutlet weak var resetButton: NSButton!
+    
+    @IBOutlet weak var emptyFieldsWindow: NSWindow!
     
     let tagRoot = "/Users/Shared/OrgName"
     
@@ -66,6 +67,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        //Create build started
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/YY HH:mm"
+        let buildStarted = dateFormatter.string(from: currentDate)
+        writeToFile(file: "\(tagRoot)/BuildStarted.txt", data: buildStarted)
+
         emptyFieldsWindow.setIsVisible(false)
         let fileManager = FileManager.default
         if  !fileManager.fileExists(atPath: tagRoot) {
